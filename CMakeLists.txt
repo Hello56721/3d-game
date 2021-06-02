@@ -22,6 +22,12 @@ endif()
 # Add the include directories
 include_directories("include")
 
+# Add the glad library
+add_library("glad" "src/glad/glad.c")
+
+# Add the libraries
+link_libraries("glad")
+
 add_executable("${3D_GAME_EXE_NAME}")
 
 add_subdirectory("src")
