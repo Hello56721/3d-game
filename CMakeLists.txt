@@ -40,6 +40,7 @@ endif()
 link_libraries("glad" "${GLFW_LIBRARY}")
 
 add_executable("${3D_GAME_EXE_NAME}")
+add_library("3d-game-engine")
 
 add_subdirectory("src")
 add_subdirectory("include")
