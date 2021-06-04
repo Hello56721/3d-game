@@ -19,7 +19,7 @@ namespace n3DGE {
         Window();
         
         // Constructor
-        Window(unsigned int width, unsigned int height, std::string_view title, bool isFullscreen);
+        Window(unsigned int width, unsigned int height, std::string_view title, bool isFullscreen = false);
         
         // Show the window, as it's hidden by default
         void show();
