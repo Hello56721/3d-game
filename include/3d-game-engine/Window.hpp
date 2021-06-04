@@ -1,14 +1,8 @@
 #ifndef CBB9864F_8D47_4591_AA20_5F63134195E3
 #define CBB9864F_8D47_4591_AA20_5F63134195E3
 
-typedef struct GLFWwindow GLFWwindow;
-
-namespace std {
-    template<typename T>
-    class basic_string_view;
-
-    using string_view = basic_string_view<char>;
-}
+#include <GLFW/glfw3.h>
+#include <string_view>
 
 namespace n3DGE {
     
