@@ -1,6 +1,12 @@
 #include <iostream>
+#include <3d-game-engine/Engine.hpp>
 
 int main(int argc, char** argv) {
-    std::cout << "Hello, World!" << std::endl;
+    n3DGE::Engine engine;
+    
+    while (true) {
+        engine.update();
+    }
+    
     return 0;
 }
