@@ -1,15 +1,20 @@
 #include <3d-game-engine/Engine.hpp>
 
 #include <iostream>
+#include <3d-game-engine/Window.hpp>
+
+using namespace n3DGE;
+
+extern Window* window = nullptr;
 
 n3DGE::Engine::Engine() {
-    std::cout << "Initializing Engine." << std::endl;
+    window = new Window();
 }
 
 void n3DGE::Engine::update() {
-    std::cout << "Updating Engine." << std::endl;
+    window->update();
 }
 
 n3DGE::Engine::~Engine() {
-    std::cout << "Stopping Engine." << std::endl;
+    delete window;
 }
