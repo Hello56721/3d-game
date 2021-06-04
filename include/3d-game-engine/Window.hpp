@@ -30,6 +30,9 @@ namespace n3DGE {
         // Show the window, as it's hidden by default
         void show();
         
+        // Returns if the window is open or not
+        bool isOpen();
+        
         // Update the window
         void update();
         
