@@ -30,6 +30,7 @@
 *.exe
 *.out
 *.app
+3d-game
 
 # Ninja clutters
 .ninja_deps
@@ -43,3 +44,7 @@ CMakeFiles
 
 # Visual Studio code clutter
 /.vscode/*
+
+# Don't ignore sources
+!/src/*
+!/include/*

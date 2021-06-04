@@ -7,13 +7,6 @@ set(CMAKE_CXX_STANDARD 17)
 # Set the place where I put package finders
 set(CMAKE_MODULE_PATH "${CMAKE_SOURCE_DIR}/cmake")
 
-# Add a extension to the executable on linux based systems
-if (UNIX AND NOT APPLE)
-    set(3D_GAME_EXE_NAME "3d-game.out")
-else()
-    set(3D_GAME_EXE_NAME "3d-game")
-endif()
-
 # Add high warning levels
 if (MSVC)
     add_compile_options("/W4")
@@ -39,11 +32,11 @@ endif()
 # Add the libraries
 link_libraries("glad" "${GLFW_LIBRARY}")
 
-add_executable("${3D_GAME_EXE_NAME}")
+add_executable("3d-game")
 add_library("3d-game-engine")
 
 add_subdirectory("src")
 add_subdirectory("include")
 
 # Link the target libraries
-target_link_libraries("${3D_GAME_EXE_NAME}" "3d-game-engine")
+target_link_libraries("3d-game" "3d-game-engine")
