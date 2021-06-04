@@ -44,3 +44,6 @@ add_library("3d-game-engine")
 
 add_subdirectory("src")
 add_subdirectory("include")
+
+# Link the target libraries
+target_link_libraries("${3D_GAME_EXE_NAME}" "3d-game-engine")
