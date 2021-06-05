@@ -10,14 +10,14 @@ if (WIN32)
             GLFW_LIBRARY
             NAMES "glfw3.lib" "glfw3dll.lib"
             PATHS "${CMAKE_SOURCE_DIR}/libs/GLFW/lib" "${CMAKE_SOURCE_DIR}/libs/GLFW/src" 
-                  "${CMAKE_SOURCE_DIR}/libs/GLFW/build/src"
+                  "${CMAKE_SOURCE_DIR}/libs/GLFW/build/src" "${CMAKE_BINARY_DIR}"
         )
     else()
         find_library(
             GLFW_LIBRARY
             NAMES "libglfw3.a" "libglfw3dll.a"
             PATHS "${CMAKE_SOURCE_DIR}/libs/GLFW/lib" "${CMAKE_SOURCE_DIR}/libs/GLFW/src" 
-                  "${CMAKE_SOURCE_DIR}/libs/GLFW/build/src"
+                  "${CMAKE_SOURCE_DIR}/libs/GLFW/build/src" "${CMAKE_BINARY_DIR}"
         )
     endif()
 else()
@@ -25,7 +25,7 @@ else()
         GLFW_LIBRARY
         NAMES "libglfw3.a" "libglfw.so"
         PATHS "${CMAKE_SOURCE_DIR}/libs/GLFW/lib" "${CMAKE_SOURCE_DIR}/libs/GLFW/src" 
-              "${CMAKE_SOURCE_DIR}/libs/GLFW/build/src"
+              "${CMAKE_SOURCE_DIR}/libs/GLFW/build/src" "${CMAKE_BINARY_DIR}"
     )
 endif()
 
