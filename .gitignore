@@ -47,6 +47,8 @@ CMakeFiles
 
 # External Libraries
 /libs/*
+libglfw.so.3
+libglfw.so.3.3
 
 # Don't ignore sources
 !/src/*
