@@ -3,4 +3,5 @@ target_sources(
     
     "Engine.cpp"
     "Window.cpp"
+    "OpenGLDebug.hpp"
 )
