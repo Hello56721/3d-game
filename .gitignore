@@ -45,6 +45,9 @@ CMakeFiles
 # Visual Studio code clutter
 /.vscode/*
 
+# External Libraries
+/libs/*
+
 # Don't ignore sources
 !/src/*
 !/include/*
