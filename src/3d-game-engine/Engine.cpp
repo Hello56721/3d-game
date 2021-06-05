@@ -5,7 +5,8 @@
 
 using namespace n3DGE;
 
-extern Window* window = nullptr;
+extern Window* window;
+Window* window = nullptr;
 
 n3DGE::Engine::Engine() {
     window = new Window();
