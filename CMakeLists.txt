@@ -14,13 +14,15 @@ else()
     add_compile_options("-Wall" "-pedantic")
 endif()
 
+option(OPENGL_DEBUG "Wether or not to enable (basic) OpenGL call checking." "on")
+
 # Add the glad library
 add_library("glad" "src/glad/glad.c")
 # Find the GLFW library
 find_package("GLFW")
 
 # Add the include directories
-include_directories("include")
+include_directories("include" "${GLFW_INCLUDE_PATH}" "${CMAKE_BINARY_DIR}")
 
 # Link the system specific libraries
 if (WIN32)
@@ -31,6 +33,8 @@ endif()
 
 # Add the libraries
 link_libraries("glad" "${GLFW_LIBRARY}")
+
+configure_file("cmake_configuration.src.hpp" "cmake_configuration.hpp")
 
 add_executable("3d-game")
 add_library("3d-game-engine")
