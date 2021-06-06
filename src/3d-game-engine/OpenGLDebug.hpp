@@ -3,10 +3,10 @@
 
 #include <cmake_configuration.hpp>
 #if OPENGL_DEBUG == 1
-    #define glCall(x, ...) n3DGE::OGLD::glCall(x, __VA_ARGS__)
-    #define glCallR(x, ...) n3DGE::OGLD::glCallR(x, __VA_ARGS__)
-    #define glCallN(x) n3DGE::OGLD::glCall(x)
-    #define glCallRN(x) n3DGE::OGLD::glCallR(x)
+    #define glCall(x, ...) n3DGE::OGLD::glCallImpl(x, __VA_ARGS__)
+    #define glCallR(x, ...) n3DGE::OGLD::glCallImplR(x, __VA_ARGS__)
+    #define glCallN(x) n3DGE::OGLD::glCallImpl(x)
+    #define glCallRN(x) n3DGE::OGLD::glCallImplR(x)
 #else
     #define glCall(x, ...) x(__VA_ARGS__)
     #define glCallR(x, ...) x(__VA_ARGS__)
