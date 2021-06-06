@@ -53,3 +53,6 @@ libglfw.so.3.3
 # Don't ignore sources
 !/src/*
 !/include/*
+
+# CMake configuration file
+cmake_configuration.hpp
