@@ -37,6 +37,11 @@
 .ninja_log
 build.ninja
 
+# Visual Studio clutters
+*.sln
+*.vcxproj
+*.filters
+
 # CMake Clutters
 CMakeCache.txt
 cmake_install.cmake
