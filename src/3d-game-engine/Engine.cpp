@@ -2,6 +2,7 @@
 
 #include <iostream>
 #include <3d-game-engine/Window.hpp>
+#include "OpenGLDebug.hpp"
 
 using namespace n3DGE;
 
@@ -10,6 +11,9 @@ Window* window = nullptr;
 
 n3DGE::Engine::Engine() {
     window = new Window();
+    
+    // Print out the OpenGL version
+    std::cout << "[INFO]: Using OpenGL version " << glCallR(glGetString, GL_VERSION) << std::endl;
 }
 
 void n3DGE::Engine::update() {
