@@ -41,6 +41,10 @@ build.ninja
 *.sln
 *.vcxproj
 *.filters
+*.tlog
+*.pdb
+*.recipe
+*.ilk
 
 # CMake Clutters
 CMakeCache.txt
