@@ -4,7 +4,7 @@
 
 extern n3DGE::Window* window;
 
-int main(int argc, char** argv) {
+int main() {
     n3DGE::Engine engine;
     
     while (window->isOpen()) {
