@@ -37,6 +37,9 @@ Window::Window() {
         glfwTerminate();
         throw "FATAL::glad::LOAD::OPENGL::FAILED";
     }
+    
+    // Lock the FPS to 60
+    glfwSwapInterval(1);
 }
 
 Window::Window(unsigned int width, unsigned int height, std::string_view title, bool isFullscreen) {
